@@ -2,7 +2,7 @@
   <a href="https://www.instagram.com/devfullcycle/" target="blank"><img src="https://fullcycle.com.br/wp-content/themes/fullcycle-blog/application/img/logo-fullcycle.png"/></a>
 </p>
 
-# Script to enable systemd in WSL2 (Ubuntu/WSL2)
+# Script to enable systemd in WSL2 (Ubuntu/Debian)
 
 Script to enable systemd support on current Ubuntu WSL2 images from the Windows store. 
 Tested on 18.04, 20.04 and the versionless (current) version of Ubuntu from the Windows Store.
