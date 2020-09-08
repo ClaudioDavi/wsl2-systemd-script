@@ -33,7 +33,7 @@ If you don't get an error and see a list of units, the script worked.
 
 ## Configure on Bash
 
-Add this line:
+Add this line on top the .bashrc or the .zshrc (zsh/oh-my-zsh):
 ```sh
 source /usr/sbin/start-systemd-namespace
 ```
