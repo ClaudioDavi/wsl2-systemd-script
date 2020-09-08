@@ -70,15 +70,3 @@ sudo rm -f /etc/systemd/user/sockets.target.wants/gpg-agent*.socket
 sudo rm -f /lib/systemd/system/sysinit.target.wants/proc-sys-fs-binfmt_misc.automount
 sudo rm -f /lib/systemd/system/sysinit.target.wants/proc-sys-fs-binfmt_misc.mount
 sudo rm -f /lib/systemd/system/sysinit.target.wants/systemd-binfmt.service
-
-if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ] && [ "$(head -n1  /proc/sys/fs/binfmt_misc/WSLInterop)" == "enabled" ]; then
-  "$(interop_prefix)$(sysdrive_prefix)"/Windows/System32/cmd.exe /C setx WSLENV BASH_ENV/u
-  "$(interop_prefix)$(sysdrive_prefix)"/Windows/System32/cmd.exe /C setx BASH_ENV /etc/bash.bashrc
-else
-  echo
-  echo "You need to manually run the following two commands in Windows' cmd.exe:"
-  echo
-  echo "  setx WSLENV BASH_ENV/u"
-  echo "  setx BASH_ENV /etc/bash.bashrc"
-  echo
-fi
